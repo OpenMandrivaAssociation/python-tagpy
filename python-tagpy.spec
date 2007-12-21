@@ -11,6 +11,7 @@ URL: http://news.tiker.net/software/tagpy
 Source0: http://news.tiker.net/news.tiker.net/download/software/tagpy/tagpy-%{version}.tar.gz
 Source1: tagpy-LICENSE
 Patch0: tagpy-0.91-baz.patch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: python-devel
 BuildRequires: taglib-devel
 BuildRequires: boost-devel
