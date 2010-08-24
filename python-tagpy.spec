@@ -2,14 +2,12 @@
 
 Summary:	Python bindings for TagLib to read and write music files tags
 Name:		python-tagpy
-Version:	0.94.5
-Release:	%{mkrel 6}
-License:	BSD
+Version:	0.94.7
+Release:	%{mkrel 1}
+License:	MIT
 Group:		Development/Python
-URL:		http://news.tiker.net/software/tagpy
-Source0:	http://news.tiker.net/news.tiker.net/download/software/tagpy/tagpy-%{version}.tar.gz
-Source1:	tagpy-LICENSE
-Patch0:		tagpy-0.94.5-baz.patch
+URL:		http://pypi.python.org/pypi/tagpy
+Source0:	http://pypi.python.org/packages/source/t/tagpy/tagpy-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 %{py_requires -d}
 BuildRequires:	python-setuptools
@@ -23,11 +21,11 @@ Vorbis Files and Ogg Flac Files and access APE tags in Musepack and MP3 files.
 
 %prep
 %setup -q -n %{shortname}-%{version}
-%patch0 -p1 -b .baz
-%{__install} -p -m 0644 %{SOURCE1} LICENSE
+#%patch0 -p1 -b .baz
+#%{__install} -p -m 0644 %{SOURCE1} LICENSE
 
 %build
-./configure --boost-python-libname=boost_python-mt
+./configure.py --boost-python-libname=boost_python-mt
 CFLAGS="%{optflags} -I%{_includedir}/taglib" %{__python} setup.py build
 
 %install
