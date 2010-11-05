@@ -2,8 +2,8 @@
 
 Summary:	Python bindings for TagLib to read and write music files tags
 Name:		python-tagpy
-Version:	0.94.7
-Release:	%{mkrel 2}
+Version:	0.94.8
+Release:	%{mkrel 1}
 License:	MIT
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/tagpy
