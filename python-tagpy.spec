@@ -21,8 +21,6 @@ Vorbis Files and Ogg Flac Files and access APE tags in Musepack and MP3 files.
 
 %prep
 %setup -q -n %{shortname}-%{version}
-#%patch0 -p1 -b .baz
-#%{__install} -p -m 0644 %{SOURCE1} LICENSE
 
 %build
 ./configure.py --boost-python-libname=boost_python-mt
