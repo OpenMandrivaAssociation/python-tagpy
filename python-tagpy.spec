@@ -2,8 +2,8 @@
 
 Summary:	Python bindings for TagLib to read and write music files tags
 Name:		python-tagpy
-Version:	0.94.8
-Release:	3
+Version:	2013.1
+Release:	1
 License:	MIT
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/tagpy
@@ -96,5 +96,6 @@ CFLAGS="%{optflags} -I%{_includedir}/taglib" %{__python} setup.py build
 * Fri Nov 23 2007 Jérôme Soyer <saispo@mandriva.org> 0.91-1mdv2008.1
 + Revision: 111580
 - import python-tagpy
+
 
 

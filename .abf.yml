@@ -1,2 +1,4 @@
+removed_sources:
+  tagpy-0.94.8.tar.gz: 052126a533e48f60807b0a678b15e594ef57d867
 sources:
-  "tagpy-0.94.8.tar.gz": 052126a533e48f60807b0a678b15e594ef57d867
+  tagpy-2013.1.tar.gz: 346dd081977e6cfb656102a263728ffd84574099
