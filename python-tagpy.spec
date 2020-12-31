@@ -2,15 +2,15 @@
 
 Summary:	Python bindings for TagLib to read and write music files tags
 Name:		python-tagpy
-Version:	0.94.8
-Release:	4
+Version:	2018.1.1
+Release:	1
 License:	MIT
 Group:		Development/Python
 URL:		http://pypi.python.org/pypi/tagpy
 Source0:	http://pypi.python.org/packages/source/t/tagpy/tagpy-%{version}.tar.gz
-%{py_requires -d}
-BuildRequires:	python-setuptools
-BuildRequires:	taglib-devel
+
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	pkgconfig(taglib)
 BuildRequires:	boost-devel
 
 %description
@@ -22,17 +22,18 @@ Vorbis Files and Ogg Flac Files and access APE tags in Musepack and MP3 files.
 %setup -q -n %{shortname}-%{version}
 
 %build
-./configure.py --boost-python-libname=boost_python-mt
-CFLAGS="%{optflags} -I%{_includedir}/taglib" %{__python} setup.py build
+CFLAGS="%{optflags} `pkg-config --cflags taglib`" \
+CFLAGS="%{optflags} `pkg-config --cflags taglib`" \
+%py_build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%py_install
 
-%files
-%doc LICENSE README test/*.py test/tagrename
-%{py_platsitedir}/%{shortname}/
-%{py_platsitedir}/_%{shortname}.so
-%{py_platsitedir}/%{shortname}-%{version}-py%{py_ver}.egg-info
+%files -n python3-%{shortname}
+%doc test/*.py test/tagrename
+%{python_sitearch}/%{shortname}/
+%{python_sitearch}/*.so
+%{python_sitearch}/*.egg-info
 
 
 %changelog
