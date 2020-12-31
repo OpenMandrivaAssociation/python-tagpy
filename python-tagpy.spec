@@ -9,6 +9,7 @@ Group:		Development/Python
 URL:		http://pypi.python.org/pypi/tagpy
 Source0:	http://pypi.python.org/packages/source/t/tagpy/tagpy-%{version}.tar.gz
 
+BuildRequires:  pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	boost-devel
