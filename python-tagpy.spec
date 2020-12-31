@@ -19,6 +19,7 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	pkgconfig(taglib)
 BuildRequires:	boost-devel
+BuildRequires:  boost-python-devel
 
 %description
 TagPy is a Python crust (or a set of Python bindings) for TagLib, which allows
