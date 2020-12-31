@@ -11,8 +11,6 @@ Source0:	http://pypi.python.org/packages/source/t/tagpy/tagpy-%{version}.tar.gz
 
 # from Debian
 Patch0:		taglib-1.8.patch
-# from upstream
-Patch1:		use_setuptools.patch
 
 BuildRequires:  pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
