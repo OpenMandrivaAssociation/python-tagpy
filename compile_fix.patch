@@ -1,6 +1,6 @@
-diff -Naur ./tagpy-2018.1.1.orig/src/wrapper/id3.cpp ./tagpy-2018.1.1/src/wrapper/id3.cpp
---- ./tagpy-2018.1.1.orig/src/wrapper/id3.cpp	2019-03-23 08:26:04.975722018 -0400
-+++ ./tagpy-2018.1.1/src/wrapper/id3.cpp	2019-03-23 08:26:54.438399217 -0400
+diff -uraN tagpy-2018.1.1/src/wrapper/id3.cpp omv-tagpy-2018.1.1/src/wrapper/id3.cpp
+--- tagpy-2018.1.1/src/wrapper/id3.cpp	2013-07-10 13:56:25.000000000 +0200
++++ omv-tagpy-2018.1.1/src/wrapper/id3.cpp	2020-12-31 13:22:49.898778705 +0100
 @@ -220,12 +220,7 @@
        .DEF_SIMPLE_METHOD(removeFrame)
        .DEF_SIMPLE_METHOD(removeFrames)
