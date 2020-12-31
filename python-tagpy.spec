@@ -9,6 +9,11 @@ Group:		Development/Python
 URL:		http://pypi.python.org/pypi/tagpy
 Source0:	http://pypi.python.org/packages/source/t/tagpy/tagpy-%{version}.tar.gz
 
+# from Debian
+Patch0:		taglib-1.8.patch
+# from upstream
+Patch1:		use_setuptools.patch
+
 BuildRequires:  pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	pkgconfig(taglib)
@@ -21,6 +26,9 @@ Vorbis Files and Ogg Flac Files and access APE tags in Musepack and MP3 files.
 
 %prep
 %setup -q -n %{shortname}-%{version}
+%autopatch -p1
+rm -rf tagpy.egg-info
+chmod -x test/tagrename
 
 %build
 CFLAGS="%{optflags} `pkg-config --cflags taglib`" \
