@@ -29,7 +29,7 @@ CFLAGS="%{optflags} `pkg-config --cflags taglib`" \
 %install
 %py_install
 
-%files -n python3-%{shortname}
+%files
 %doc test/*.py test/tagrename
 %{python_sitearch}/%{shortname}/
 %{python_sitearch}/*.so
