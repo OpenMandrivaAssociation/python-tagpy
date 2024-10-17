@@ -6,7 +6,7 @@ Version:	2018.1.1
 Release:	1
 License:	MIT
 Group:		Development/Python
-URL:		http://pypi.python.org/pypi/tagpy
+URL:		https://pypi.python.org/pypi/tagpy
 Source0:	http://pypi.python.org/packages/source/t/tagpy/tagpy-%{version}.tar.gz
 
 # from Debian
