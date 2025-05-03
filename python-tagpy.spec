@@ -1,5 +1,6 @@
 %define module tagpy
-%bcond_without test
+# disable tests on abf
+%bcond_with test
 
 Name:			python-tagpy
 License:	MIT
