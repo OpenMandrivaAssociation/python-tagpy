@@ -50,8 +50,7 @@ export CFLAGS="%{optflags} `pkg-config --cflags taglib`"
 
 %if %{with test}
 %check
-pip install -e .[test]
-%{__python} -m pytest
+%{__python} -m pytest --import-mode append
 %endif
 
 %files
