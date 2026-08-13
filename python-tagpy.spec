@@ -5,7 +5,7 @@
 Name:			python-tagpy
 License:	MIT
 Version:	2025.1
-Release:	5
+Release:	6
 Summary:	Python bindings for TagLib to read and write music files tags
 Group:		Development/Python
 URL:			https://pypi.org/project/tagpy/
