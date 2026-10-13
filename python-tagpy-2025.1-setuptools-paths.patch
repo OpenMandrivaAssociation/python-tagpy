@@ -1,0 +1,22 @@
+--- a/setup.py
++++ b/setup.py
+@@ -29,8 +29,8 @@
+ 
+ def main():
+ 
+-    INCLUDE_DIRS = ""  # conf["TAGLIB_INC_DIR"] + conf["BOOST_INC_DIR"]
+-    LIBRARY_DIRS = ""  # conf["TAGLIB_LIB_DIR"] + conf["BOOST_LIB_DIR"]
++    INCLUDE_DIRS = []  # conf["TAGLIB_INC_DIR"] + conf["BOOST_INC_DIR"]
++    LIBRARY_DIRS = []  # conf["TAGLIB_LIB_DIR"] + conf["BOOST_LIB_DIR"]
+ 
+     boost_name = None
+ 
+@@ -93,7 +93,7 @@
+                 include_dirs=INCLUDE_DIRS,
+                 library_dirs=LIBRARY_DIRS,
+                 libraries=LIBRARIES,
+-                extra_compile_args="",  # conf["CXXFLAGS"],
++                extra_compile_args=[],  # conf["CXXFLAGS"],
+             ),
+         ],
+     )

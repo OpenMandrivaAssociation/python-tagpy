@@ -11,6 +11,8 @@ Group:		Development/Python
 URL:			https://pypi.org/project/tagpy/
 # https://github.com/palfrey/tagpy
 Source0:	https://github.com/palfrey/tagpy/archive/v%{version}/%{module}-%{version}.tar.gz
+# setuptools 84 rejects string include_dirs, library_dirs, and extra_compile_args
+Patch0:		python-tagpy-2025.1-setuptools-paths.patch
 
 BuildSystem:	python
 BuildRequires:	boost-devel
